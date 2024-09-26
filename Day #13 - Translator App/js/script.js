@@ -1,10 +1,12 @@
-const fromText = document.querySelector(".from-text");
-const toText = document.querySelector(".to-text");
-const exchageIcon = document.querySelector(".exchange");
-const selectTag = document.querySelectorAll("select");
-const icons = document.querySelectorAll(".row i");
-const translateBtn = document.querySelector("button");
+// 获取页面中的元素
+const fromText = document.querySelector(".from-text"); // 获取输入框
+const toText = document.querySelector(".to-text"); // 获取输出框
+const exchageIcon = document.querySelector(".exchange"); // 获取交换图标
+const selectTag = document.querySelectorAll("select"); // 获取下拉框
+const icons = document.querySelectorAll(".row i"); // 获取图标
+const translateBtn = document.querySelector("button"); // 获取翻译按钮
 
+// 为下拉框添加选项
 selectTag.forEach((tag, id) => {
     for (let country_code in countries) {
         let selected = id == 0 ? country_code == "en-GB" ? "selected" : "" : country_code == "de-DE" ? "selected" : "";
@@ -13,6 +15,7 @@ selectTag.forEach((tag, id) => {
     }
 });
 
+// 点击交换图标时，交换输入框和输出框的值
 exchageIcon.addEventListener("click", () => {
     let tempText = fromText.value,
         tempLang = selectTag[0].value;
@@ -22,12 +25,14 @@ exchageIcon.addEventListener("click", () => {
     selectTag[1].value = tempLang;
 });
 
+// 输入框为空时，输出框清空
 fromText.addEventListener("keyup", () => {
     if (!fromText.value) {
         toText.value = "";
     }
 });
 
+// 点击翻译按钮时，调用翻译API
 translateBtn.addEventListener("click", () => {
     let text = fromText.value.trim(),
         translateFrom = selectTag[0].value,
@@ -46,6 +51,7 @@ translateBtn.addEventListener("click", () => {
     });
 });
 
+// 点击图标时，执行相应的操作
 icons.forEach(icon => {
     icon.addEventListener("click", ({ target }) => {
         if (!fromText.value || !toText.value) return;

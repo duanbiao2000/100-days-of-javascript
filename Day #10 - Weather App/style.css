@@ -1,3 +1,4 @@
+/* 全局样式 */
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     box-sizing: border-box;
 }
 
+/* body样式 */
 body{
     height: 100vh;
     display: flex;
@@ -14,6 +16,7 @@ body{
     background: #06283D;
 }
 
+/* 容器样式 */
 .container{
     position: relative;
     width: 400px;
@@ -26,6 +29,7 @@ body{
     transition: 0.6s ease-out;
 }
 
+/* 搜索框样式 */
 .search-box{
     width: 100%;
     height: min-content;
@@ -34,6 +38,7 @@ body{
     justify-content: space-between;
 }
 
+/* 搜索框输入框样式 */
 .search-box input{
     color: #06283D;
     width: 80%;
@@ -43,6 +48,7 @@ body{
     padding-left: 32px;
 }
 
+/* 搜索框输入框占位符样式 */
 .search-box input::placeholder{
     font-size: 20px;
     font-weight: 500;
@@ -50,6 +56,7 @@ body{
     text-transform: capitalize;
 }
 
+/* 搜索框按钮样式 */
 .search-box button{
     cursor: pointer;
     width: 50px;
@@ -61,26 +68,31 @@ body{
     transition: 0.4s ease;
 }
 
+/* 搜索框按钮悬停样式 */
 .search-box button:hover{
     color: #fff;
     background: #06283D;
 }
 
+/* 搜索框图标样式 */
 .search-box i{
     position: absolute;
     color: #06283D;
     font-size: 28px;
 }
 
+/* 天气盒子样式 */
 .weather-box{
     text-align: center;
 }
 
+/* 天气盒子图片样式 */
 .weather-box img{
     width: 60%;
     margin-top: 30px;
 }
 
+/* 温度样式 */
 .weather-box .temperature{
     position: relative;
     color: #06283D;
@@ -90,12 +102,14 @@ body{
     margin-left: -16px;
 }
 
+/* 温度单位样式 */
 .weather-box .temperature span{
     position: absolute;
     margin-left: 4px;
     font-size: 1.5rem;
 }
 
+/* 天气描述样式 */
 .weather-box .description{
     color: #06283D;
     font-size: 22px;
@@ -103,6 +117,7 @@ body{
     text-transform: capitalize;
 }
 
+/* 天气详情样式 */
 .weather-details{
     width: 100%;
     display: flex;
@@ -110,6 +125,7 @@ body{
     margin-top: 30px;
 }
 
+/* 湿度样式 */
 .weather-details .humidity, .weather-details .wind{
     display: flex;
     align-items: center;
@@ -117,16 +133,19 @@ body{
     height: 100px;
 }
 
+/* 湿度样式 */
 .weather-details .humidity{
     padding-left: 20px;
     justify-content: flex-start;
 }
 
+/* 风速样式 */
 .weather-details .wind{
     padding-right: 20px;
     justify-content: flex-end;
 }
 
+/* 天气图标样式 */
 .weather-details i{
     color: #06283D;
     font-size: 26px;
@@ -134,18 +153,21 @@ body{
     margin-top: 6px;
 }
 
+/* 天气数据样式 */
 .weather-details span{
     color: #06283D;
     font-size: 22px;
     font-weight: 500;
 }
 
+/* 天气描述样式 */
 .weather-details p{
     color: #06283D;
     font-size: 14px;
     font-weight: 500;
 }
 
+/* 未找到天气样式 */
 .not-found{
     width: 100%;
     text-align: center;
@@ -155,10 +177,12 @@ body{
     display: none;
 }
 
+/* 未找到天气图片样式 */
 .not-found img{
     width: 70%;
 }
 
+/* 未找到天气描述样式 */
 .not-found p{
     color: #06283D;
     font-size: 22px;
@@ -166,16 +190,19 @@ body{
     margin-top: 12px;
 }
 
+/* 天气盒子样式 */
 .weather-box, .weather-details{
     scale: 0;
     opacity: 0;
 }
 
+/* 淡入动画 */
 .fadeIn{
     animation: 0.5s fadeIn forwards;
     animation-delay: 0.5s;
 }
 
+/* 淡入动画关键帧 */
 @keyframes fadeIn{
     to {
         scale: 1;

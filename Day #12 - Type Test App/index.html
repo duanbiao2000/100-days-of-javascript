@@ -2,37 +2,54 @@
 <html lang="en">
 
 <head>
+    <!-- 设置字符编码为UTF-8 -->
     <meta charset="UTF-8">
+    <!-- 设置IE浏览器兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置视口宽度为设备宽度，初始缩放比例为1.0 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入外部样式表 -->
     <link rel="stylesheet" href="style.css">
+    <!-- 设置网页标题 -->
     <title>Day #12 - Type Test App | AsmrProg</title>
 </head>
 
 <body>
 
+    <!-- 容器 -->
     <div class="container">
+        <!-- 统计信息 -->
         <div class="stats">
+            <!-- 时间 -->
             <p>Time: <span id="timer">0s</span></p>
+            <!-- 错误数 -->
             <p>Mistakes: <span id="mistakes">0</span></p>
         </div>
+        <!-- 引用 -->
         <div id="quote" onmousedown="return false" onselectstart="return false"></div>
 
+        <!-- 输入框 -->
         <textarea id="quote-input" rows="3" placeholder="Type here when test starts..."></textarea>
 
+        <!-- 开始测试按钮 -->
         <button id="start-test" onclick="startTest()">Start Test</button>
+        <!-- 停止测试按钮 -->
         <button id="stop-test" onclick="displayResult()">Stop Test</button>
 
+        <!-- 结果 -->
         <div class="result">
             <h3>Result</h3>
             <div class="wrapper">
+                <!-- 准确率 -->
                 <p>Accuracy: <span id="accuracy"></span></p>
+                <!-- 速度 -->
                 <p>Speed: <span id="wpm"></span></p>
             </div>
         </div>
 
     </div>
 
+    <!-- 引入外部脚本 -->
     <script src="index.js"></script>
 </body>
 

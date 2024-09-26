@@ -2,48 +2,77 @@
 <html lang="en">
 
 <head>
+    <!-- 设置字符编码为UTF-8 -->
     <meta charset="UTF-8">
+    <!-- 设置IE浏览器兼容模式 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 设置视口宽度为设备宽度，初始缩放比例为1.0 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入谷歌字体 -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <!-- 引入CSS样式表 -->
     <link rel="stylesheet" href="style.css">
+    <!-- 设置网页标题 -->
     <title>Day #10 - Weather App | AsmrProg</title>
 </head>
 
 <body>
 
+    <!-- 容器 -->
     <div class="container">
+        <!-- 搜索框 -->
         <div class="search-box">
+            <!-- 定位图标 -->
             <i class="fa-solid fa-location-dot"></i>
+            <!-- 输入框 -->
             <input type="text" placeholder="Enter your location">
+            <!-- 搜索按钮 -->
             <button class="fa-solid fa-magnifying-glass"></button>
         </div>
 
+        <!-- 未找到结果 -->
         <div class="not-found">
+            <!-- 404图片 -->
             <img src="images/404.png">
+            <!-- 提示信息 -->
             <p>Oops! Invalid location :/</p>
         </div>
 
+        <!-- 天气盒子 -->
         <div class="weather-box">
+            <!-- 天气图标 -->
             <img src="">
+            <!-- 温度 -->
             <p class="temperature"></p>
+            <!-- 天气描述 -->
             <p class="description"></p>
         </div>
 
+        <!-- 天气详情 -->
         <div class="weather-details">
+            <!-- 湿度 -->
             <div class="humidity">
+                <!-- 水滴图标 -->
                 <i class="fa-solid fa-water"></i>
+                <!-- 文字 -->
                 <div class="text">
+                    <!-- 湿度数值 -->
                     <span></span>
+                    <!-- 湿度描述 -->
                     <p>Humidity</p>
                 </div>
             </div>
+            <!-- 风速 -->
             <div class="wind">
+                <!-- 风图标 -->
                 <i class="fa-solid fa-wind"></i>
+                <!-- 文字 -->
                 <div class="text">
+                    <!-- 风速数值 -->
                     <span></span>
+                    <!-- 风速描述 -->
                     <p>Wind Speed</p>
                 </div>
             </div>
@@ -51,7 +80,9 @@
 
     </div>
 
+    <!-- 引入Font Awesome图标库 -->
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <!-- 引入JavaScript文件 -->
     <script src="index.js"></script>
 </body>
 
